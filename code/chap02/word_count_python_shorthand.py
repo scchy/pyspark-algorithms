@@ -14,7 +14,7 @@ import collections
 input_path = sys.argv[1]
 #
 with open(input_path) as input_file:
-    word_count = collections.Counter(input_file.read().split())
+    word_count = collections.Counter(input_file.read().replace('\n', ' ').split())
 #
 print (word_count)
 
